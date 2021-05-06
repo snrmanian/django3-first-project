@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Welcome to Tables Page of Display App {% endblock %}
+{% block content %}
+{% if table %}
+<h2> Hello !!! Entries in table {{table}} </h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Matric ID</th>
+        <th>Aggregate marks</th>
+    </tr>
+    {% for record in result %}    
+    <tr>
+        {% for cell in record %}
+            <td> {{cell}} </td>
+        {% endfor %}
+    </tr>        
+    {%endfor %}
+</table>
+{% else %}
+<h2> {{result}} </h2>
+{% endif %}
+
+<a href = {%  url 'home' %}> HOME </a> <br>
+
+
+{% endblock %}
+    

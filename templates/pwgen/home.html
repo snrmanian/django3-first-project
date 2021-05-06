@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="pwgen">
+<h1> Hello !!! </h1>
+<select  name="length">
+    <option  value=6>6</option>
+    <option  value=7>7</option>
+    <option  value=8>8</option>
+    <option  value=9>9</option>
+    <option  value=10 selected>10</option>
+    <option  value=11>11</option>
+    <option  value=12>12</option>
+    <option  value=13>13</option>
+    <option  value=14>14</option>
+</select> Length
+<br>
+<input type="checkbox" name="upper"> Uppercase <br>
+<input type="checkbox" name="lower"> Lowercase <br>
+<input type="checkbox" name="numbers"> Numbers <br>
+<input type="checkbox" name="special"> Special <br>
+<input type="submit" value="Generate password" class="btn btn-primary"><br><br><br>
+
+<a href = {%  url 'home' %} class="btn btn-info"> HOME </a><br>
+<a href = {% url 'about' %} class="btn btn-warning"> About us </a><br>
+</form>
+{% endblock %}

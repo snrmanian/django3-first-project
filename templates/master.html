@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<a href = {%  url 'home2' %}> Password Generation </a><br><br>
+<a href = {%  url 'home1' %}> Display Tables from mysql database using python pymysql connect</a><br><br>
+<a href = {%  url 'add_student' %}> Add student in mysql database using django models </a><br><br>
+
+<br><br>
+<a href = {% url 'about' %}> About us </a><br><br>
+
+{% endblock %}

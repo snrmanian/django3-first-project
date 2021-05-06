@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to Home Page of Adding students  {% endblock %}
+
+{% block content %}
+
+<h2> Hello !!! Enter the student record to be added to display_student mysql table</h2>
+
+<form action="#" method='POST'>
+
+    {% csrf_token %} 
+    
+    Enter student ID   : <input type = "text" name = "stid"> <BR>
+    Enter student name : <input type = "text" name = "stname"> <BR><BR>
+    
+    <input type="submit" value="Add to mySQL Database" formaction="add" class="btn btn-primary"/> <BR><BR>
+
+</form>
+
+<a href = {%  url 'home' %}> HOME </a> <br>
+{% endblock %}
